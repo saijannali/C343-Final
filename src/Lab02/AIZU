@@ -1,0 +1,65 @@
+package AIZU;
+import java.util.Scanner;
+
+
+
+public class AIZU {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int firstNum = input.nextInt();
+		input.nextLine();
+		String secondLine = input.nextLine();
+		String[] secondSplit = secondLine.split(" ");
+		int[] firstArr = new int[secondSplit.length];
+		for (int i=0; i < secondSplit.length;i++) {
+			firstArr[i] = Integer.parseInt(secondSplit[i]);
+		}
+		int secondNum = input.nextInt();
+		input.nextLine();
+		String fourthLine = input.nextLine();
+		String[] fourthSplit = fourthLine.split(" ");
+		int[] secondArr = new int[fourthSplit.length];
+		for (int j =0; j < fourthSplit.length;j++){
+			secondArr[j] = Integer.parseInt(fourthSplit[j]);
+		}
+		input.close();
+		LinearSearch(firstArr,secondArr);
+		
+		int count = 0;
+		for (int x =0; x<secondArr.length;x++) {
+			int tick = BinarySearch(firstArr,0,firstArr.length-1,secondArr[x]);
+			if(tick != -1) {
+				count++;
+			}
+		}
+		System.out.println("BS: " + count);
+	}
+	public static void LinearSearch(int[] firstArr, int[] secondArr) {
+		int similarCount = 0;
+		for(int i = 0; i < firstArr.length; i++){
+			for(int j=0; j < secondArr.length; j++) {
+				if (firstArr[i] == secondArr[j]) {
+					similarCount = similarCount + 1;
+				}
+			}
+		}
+		System.out.println("LinearSearch:" + similarCount);
+	}
+	
+	public static int BinarySearch(int[] firstArr,int first, int last, int index) {
+		if (first <= last) {
+		int middle = (first + last)/2;
+		
+		if(firstArr[middle] == index)
+			return middle;
+		
+		if(firstArr[middle] > index)
+			return BinarySearch(firstArr,first,middle-1,index);
+		
+		else
+			return BinarySearch(firstArr,middle+1,last,index);
+		}
+		return -1;
+	}
+}
