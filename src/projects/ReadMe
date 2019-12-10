@@ -1,0 +1,7 @@
+PROGRAM: 
+
+	Our program takes in a single line as an input. The format of this input follows s1/s2/s3.../sN where s1 through n are 
+  the strings you wish to process in the program separated by a ‘/’ character. After taking in the input the program enters 
+  a double for loop. The first one goes through the first five strings, selecting them as a base string for each loop of this 
+  outer loop. Inside of this loop there is a for loop which returns the data results for the base string against the rest 
+  of the list of strings, outputting the data.
