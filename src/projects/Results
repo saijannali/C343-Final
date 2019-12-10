@@ -1,0 +1,102 @@
+RESULTS:
+
+	When getting our results we not only found the Edit Distance between the two strings, but also something we called the Adjusted Edit Distance (AED). The AED was computed by taking the Edit Distance and subtracting the difference in the length of the strings. This normalized the results when one string was much longer than the other, as the length difference affected the Edit Distance much more than it affected the LCS, and made comparing the two base values unfair. Using these results we found that there is a weak inverse correlation between the two. The line of best fit for our data had an equation of:
+		AED =  (-0.124 * LCS) + 52.5
+
+With an R^2 value of 0.028.
+
+/* IMAGE SHOWN IN ANOTHER FILE */
+
+
+RESULT DATA:
+
+
+
+(Format; 
+string One & string Two: Difference in length, LCS, Edit Distance, ED - Dif in Len)
+
+
+Trials: s0
+s0 & s1: 138 138 170
+s0 & s2: 9 107 94
+s0 & s3: 366 162 372
+s0 & s4: 303 161 312
+s0 & s5: 399 166 401
+s0 & s6: 21 97 85
+s0 & s7: 381 164 385
+s0 & s8: 57 124 114
+s0 & s9: 501 166 503
+s0 & s10: 1179 168 1179
+s0 & s11: 504 168 504
+s0 & s12: 30 92 93
+s0 & s13: 330 159 339
+s0 & s14: 132 139 166
+s0 & s15: 114 139 148
+
+Trials: s1
+s1 & s0: 138 138 170
+s1 & s2: 129 143 172
+s1 & s3: 228 250 292
+s1 & s4: 165 247 238
+s1 & s5: 261 256 321
+s1 & s6: 159 125 183
+s1 & s7: 243 252 307
+s1 & s8: 81 164 157
+s1 & s9: 363 272 400
+s1 & s10: 1041 306 1041
+s1 & s11: 366 278 399
+s1 & s12: 168 117 189
+s1 & s13: 192 243 270
+s1 & s14: 6 189 165
+s1 & s15: 24 191 154
+
+Trials: s2
+s2 & s0: 9 107 94
+s2 & s1: 129 143 172
+s2 & s3: 357 168 367
+s2 & s4: 294 168 303
+s2 & s5: 390 173 394
+s2 & s6: 30 97 94
+s2 & s7: 372 169 380
+s2 & s8: 48 127 114
+s2 & s9: 492 174 495
+s2 & s10: 1170 177 1170
+s2 & s11: 495 176 496
+s2 & s12: 39 98 92
+s2 & s13: 321 167 331
+s2 & s14: 123 139 167
+s2 & s15: 105 143 146
+
+Trials: s3
+s3 & s0: 366 162 372
+s3 & s1: 228 250 292
+s3 & s2: 357 168 367
+s3 & s4: 63 328 265
+s3 & s5: 33 361 285
+s3 & s6: 387 143 391
+s3 & s7: 15 347 288
+s3 & s8: 309 208 330
+s3 & s9: 135 389 325
+s3 & s10: 813 501 851
+s3 & s11: 138 386 329
+s3 & s12: 396 136 398
+s3 & s13: 36 333 282
+s3 & s14: 234 251 292
+s3 & s15: 252 237 307
+Trials: s4
+s4 & s0: 303 161 312
+s4 & s1: 165 247 238
+s4 & s2: 294 168 303
+s4 & s3: 63 328 265
+s4 & s5: 96 343 278
+s4 & s6: 324 144 327
+s4 & s7: 78 332 267
+s4 & s8: 246 202 271
+s4 & s9: 198 362 335
+s4 & s10: 876 454 893
+s4 & s11: 201 367 330
+s4 & s12: 333 136 335
+s4 & s13: 27 314 255
+s4 & s14: 171 241 246
+s4 & s15: 189 230 248
+
