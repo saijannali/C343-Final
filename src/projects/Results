@@ -1,6 +1,10 @@
 RESULTS:
 
-	When getting our results we not only found the Edit Distance between the two strings, but also something we called the Adjusted Edit Distance (AED). The AED was computed by taking the Edit Distance and subtracting the difference in the length of the strings. This normalized the results when one string was much longer than the other, as the length difference affected the Edit Distance much more than it affected the LCS, and made comparing the two base values unfair. Using these results we found that there is a weak inverse correlation between the two. The line of best fit for our data had an equation of:
+	When getting our results we not only found the Edit Distance between the two strings, but also something we called the Adjusted Edit Distance (AED). 
+	The AED was computed by taking the Edit Distance and subtracting the difference in the length of the strings. This normalized the results when one 
+	string was much longer than the other, as the length difference affected the Edit Distance much more than it affected the LCS, and made comparing 
+	the two base values unfair. Using these results we found that there is a weak inverse correlation between the two. The line of best fit for our data 
+	had an equation of:
 		AED =  (-0.124 * LCS) + 52.5
 
 With an R^2 value of 0.028.
